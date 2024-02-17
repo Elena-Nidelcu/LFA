@@ -105,7 +105,7 @@ def check_word(word):
 Working on this lab I understood better how grammar and finite automata work, by choosing python, I implemented the algorithms for creating new words according to the grammar, generating a finite automaton from that grammar and for checking whether a string belongs to a grammar or not. Finally, through testing I assured that those algorithms work. e.g. The last algorithm I tested with 10 words I new before whether they are or not in the language, and the results were correct.
 
 **Results:**
-![Results](E:\labs\LFA\lab1\screenshot.png)
+![Results](C:\Users\Asus\Desktop\LFA-git\lab1\screenshot.png)
 
 ## References
 me
