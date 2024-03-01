@@ -1,4 +1,4 @@
-# LFA lab 1  (Variant 16)
+# LFA lab 2  (Variant 16)
 
 ### Course: Formal Languages & Finite Automata
 ### Author: Nidelcu Elena
@@ -239,8 +239,8 @@ plt.show()
 Working on this lab I understood better how to check to which type of chompsky belongs a grammar, to convert from FA to regular grammar, to check if it is a deterministic FA or not, to convert from NFA to DFA and to plot a DFA on a graph, I implemented the algorithms for reaching these objectives. Finally, through testing I assured that those algorithms work.
 
 **Results:**
-![Results](E:\labs\LFA\lab1\lab2-a.jpg)
-![Results](E:\labs\LFA\lab1\lab2.jpg)
-![Results](E:\labs\LFA\lab1\lab2-d.png)
+![Results](E:\GIT-LFA\LFA\lab1\lab2-a.jpg)
+![Results](E:\GIT-LFA\LFA\lab1\lab2.jpg)
+![Results](E:\GIT-LFA\LFA\lab1\lab2-d.png)
 ## References
 me
