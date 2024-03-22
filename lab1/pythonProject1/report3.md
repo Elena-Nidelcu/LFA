@@ -13,6 +13,10 @@
 
 ## Implementation description
 
+* Importing library
+
+```from ply import lex``` imports the necessary components from the ply library to build and use a lexer for lexical analysis of input strings, which is essential for parsing and processing domain-specific languages or other structured text formats. The ply library is a popular tool for building compilers, interpreters, and other language processing tools in Python. The lex module within ply is used specifically for generating lexical analyzers (lexers) that tokenize input strings based on specified token rules and regular expressions.
+
 * Define tokens
 
 I defined a tokens tuple which contains how an identifiers, a number and a string are written, and also predefined identifiers which are used to manipulate images.
