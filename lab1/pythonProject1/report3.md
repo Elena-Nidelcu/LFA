@@ -73,7 +73,7 @@ lexer.input(data)
 Working on this lab I understood better what a lexical analysis is, I got familiar with the inner workings of a lexer/scanner/tokenizer. For this, I implemented a lexer for Image processing domain specific language using Python and the ply library. The lexer was designed to tokenize a DSL script containing various operations such as loading images, applying filters, converting formats, cropping, and saving images. The lexer successfully identified and tokenized the DSL commands in the sample script, producing output that showed each token type, value, line number, and position in the input script. Regular expressions were used to define the patterns for matching tokens, ensuring accurate tokenization of different elements in the DSL script.
 
 **Results:**
-![Results](E:\GIT-LFA\LFA\lab1\lab3.png)
+![Results](E:\GIT-LFA\LFA\lab1\lab4.png)
 
 ## References
 https://en.wikipedia.org/wiki/Lexical_analysis
