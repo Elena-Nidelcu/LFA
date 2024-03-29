@@ -1,4 +1,4 @@
-# LFA lab 4  (Variant )
+# LFA lab 4  (Variant 4)
 
 ### Course: Formal Languages & Finite Automata
 ### Author: Nidelcu Elena
@@ -53,7 +53,7 @@ elif char == '*':
 In this lab, I explored the concept of regular expressions and their practical applications. For this lab, I implemented code to generate valid combinations of symbols conforming to given complex regular expressions. I limited repetitions to 5 times for patterns allowing an undefined number of repetitions to avoid generating excessively long combinations. Additionally, I implemented a function to show the sequence of processing a regular expression, providing a step-by-step explanation of how the pattern is matched.
 
 **Results:**
-![Results](E:\labs\LFA\lab1\screenshot.png)
+![Results](E:\GIT-LFA\LFA\lab1\lab4.png)
 
 ## References
 me
