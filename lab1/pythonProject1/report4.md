@@ -21,7 +21,7 @@
 
 * About 2-3 sentences to explain each piece of the implementation.
   1.  task 1:
-  to do this task I appended step by step tokens to generated_string. If it contains chars between [], i generate a random choice from those chars, if it has char and an '*' after it, I generate 0 to 5 (random) occurrences of that char, if it's '+', 1 to 5 occurrences, if it has a number between {}, I generate that number of occurrences of that char, and if nothing is specified, I generate just that char. Examples are given below.
+  to do this task I pass all the chars in the regex string. If it contains chars between [], I add to the word a random choice from those chars, if it has char and an '*' after it, I choose a random number between 0 and 5 and add that number of preceding char, similarly with '+', just with the difference that the number is beetween 1 and 5, if it has a number between {}, I add to the word the specified amount of chars.
   2. task 2:
   I just generated random integer from 1 to 5
   3. task 3:
@@ -31,9 +31,13 @@
 
 ```
 # task 1
-random.choice(['S', 'T'])
-'L'
-random.choice(['X', 'Y', 'Z']) * 2
+elif char == '+':
+    pr_elem = regex[regex.index(char) - 1]
+    word += pr_elem * random.randint(1, 5)
+elif char == '{':
+    curly_brace = True
+    number = int(regex[regex.index(char) + 1 : regex.index('}')])
+    word += random.choice(pr_group) * number
 
 ```
 ```
@@ -53,7 +57,7 @@ elif char == '*':
 In this lab, I explored the concept of regular expressions and their practical applications. For this lab, I implemented code to generate valid combinations of symbols conforming to given complex regular expressions. I limited repetitions to 5 times for patterns allowing an undefined number of repetitions to avoid generating excessively long combinations. Additionally, I implemented a function to show the sequence of processing a regular expression, providing a step-by-step explanation of how the pattern is matched.
 
 **Results:**
-![Results](E:\GIT-LFA\LFA\lab1\lab4.png)
+![Results](E:\labs\LFA\lab1\screenshot.png)
 
 ## References
 me
