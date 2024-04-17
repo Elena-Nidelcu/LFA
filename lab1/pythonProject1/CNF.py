@@ -55,50 +55,59 @@ def cnf():
                         P[i][j] = P[i][j].replace(P1[k], k)
 
 # Testing epsilon productions
-# P = {
-#     'S' : ['ADCa'],
-#     'A' : ['a'],
-#     'B' : ['eps'],
-#     'C' : ['ED', 'eps'],
-#     'D' : ['BC', 'b']
-# }
-# epsilon()
-# print(P)
+P = {
+    'S' : ['ADCa'],
+    'A' : ['a'],
+    'B' : ['eps'],
+    'C' : ['ED', 'eps'],
+    'D' : ['BC', 'b']
+}
+T = {'S': ['ADCa', 'ADa', 'ACa', 'Aa'], 'A': ['a'], 'B': [], 'C': ['ED', 'E'], 'D': ['BC', 'b', 'C', 'B']}
+epsilon()
+print(P)
+print(P == T)
 
 # Testing unit productions
-# P = {
-#     'S' : ['AB'],
-#     'A' : ['a'],
-#     'B' : ['C', 'b'],
-#     'C' : ['D'],
-#     'D' : ['E'],
-#     'E' : ['a']
-# }
-# unit()
-# unit()
-# print(P)
+P = {
+    'S' : ['AB'],
+    'A' : ['a'],
+    'B' : ['C', 'b'],
+    'C' : ['D'],
+    'D' : ['E'],
+    'E' : ['a']
+}
+T = {'S': ['AB'], 'A': ['a'], 'B': ['b', 'a'], 'C': ['a'], 'D': ['a'], 'E': ['a']}
+unit()
+unit()
+print(P)
+print(P == T)
 
 # Testing inaccessible symbols
-# P = {
-#     'S' : 'AB',
-#     'A' : 'a',
-#     'B' : 'C',
-#     'C' : 'aB',
-#     'D' : 'E',
-#     'E' : 'a'
-# }
-# inaccessible()
-# print(P)
+P = {
+    'S' : 'AB',
+    'A' : 'a',
+    'B' : 'C',
+    'C' : 'aB',
+    'D' : 'E',
+    'E' : 'a'
+}
+T = {'S': 'AB', 'A': 'a', 'B': 'C', 'C': 'aB'}
+inaccessible()
+print(P)
+print(P == T)
 
 # Testing unproductive symbols
-# P = {
-#     'S' : ['AB'],
-#     'A' : ['aA', 'a'],
-#     'B' : ['b', 'CA'],
-#     'C' : ['bD', 'CA']
-# }
-# unproductive()
-# print(P)
+P = {
+    'S' : ['AB'],
+    'A' : ['aA', 'a'],
+    'B' : ['b', 'CA'],
+    'C' : ['bD', 'CA']
+}
+T = {'S': ['AB'], 'A': ['aA', 'a'], 'B': ['b']}
+unproductive()
+print(P)
+print(P == T)
+
 # Testing cnf
 P = {
     'S' : ['abAB'],
@@ -113,5 +122,7 @@ P1 = {
     'X5': 'ab',
     'X6': 'a'
 }
+T = {'S': ['X5X2'], 'A': ['X3X4', 'BS', 'X6A', 'b'], 'B': ['BA', 'X5X1', 'b']}
 cnf()
 print(P)
+print(P == T)

@@ -26,10 +26,16 @@
 * About 2-3 sentences to explain each piece of the implementation.
   1.  task a:
   I encapsulated every step of transforming CFG to CNF into appropriate function: 1. removing epsilon-productions, 2. removing unit-productions, 3. removing inaccessible symbols, 4. removing unproductive symbols, 5. CNF
+  
+  * First, in the epsilon() function I passed all the dictionary (grammar) and if the only value of one key is 'eps', I remove that 'eps' and pass again all the grammar and if a meet the key where I deleted the 'eps' in other key's values, I replace it with ''.
+  * In the unit() function I passed all the dictionary and if I found an element of the form 'A' : 'B' (one non-terminal -> one non-terminal), I replace the value with its value where it is a key in the grammar, until the remaining form is not 'A' : 'B'.
+  * In the inaccessible() function I added all the characters which are values in one string, and in the other string I stored all the keys of the dictionary which are not in the first string. Finally, I deleted all the elements from the grammar whose keys belong to the second string.
+  * In the unproductive() function I store in a string all the keys which does not have a terminal symbol as production. Then, I remove from the grammar all elements whose keys are in that string, and I also remove the productions which contain that character.
+  * In the CNF section I created another grammar P1 to store productions of the form 'X1' : 'abB', to help me to replace the productions which are not in the CNF. In the cnf() function I check the production, and if it is not CNF, then I find in P1 a production which matches to the current production and replace it.
   2.  task b:
   for every step I created a dict of rules to test the functions
   3.  task c:
-  each time I tested created dict with according function and printing the dict after it.
+  each time I tested created dict with according function and printing the dict after it. I stored the correct answer in another grammar and after execution of the functions I checked if they are equal.
 
 * Code snippets from your files.
 
